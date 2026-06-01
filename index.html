@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>نمایشگر KML</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1a73e8">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- نوار ابزار بالا -->
+  <div id="toolbar">
+    <button id="btn-load" title="بارگذاری فایل KML/KMZ">📂 باز کردن فایل</button>
+    <button id="btn-gps" title="پرش به موقعیت من">📍 موقعیت من</button>
+    <button id="btn-follow" title="دنبال کردن خودکار">🔄 تعقیب</button>
+    <button id="btn-clear" title="پاک کردن همه">🗑️ حذف نقاط</button>
+  </div>
+
+  <!-- پنل اطلاعات مسیریابی -->
+  <div id="nav-panel" class="hidden">
+    <span id="target-name">مقصد انتخاب نشده</span>
+    <span id="dist-info"></span>
+    <span id="dir-info"></span>
+    <button id="btn-clear-target">✖️</button>
+  </div>
+
+  <!-- ورودی فایل مخفی -->
+  <input type="file" id="file-input" accept=".kml,.kmz" hidden>
+
+  <!-- کتابخانه‌ها -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-omnivore@0.4.0/leaflet-omnivore.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
