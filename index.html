@@ -6,7 +6,10 @@
   <title>نمایشگر KML</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#1a73e8">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
+  <!-- CSS Leaflet از jsDelivr -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css" />
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -31,10 +34,11 @@
   <!-- ورودی فایل مخفی -->
   <input type="file" id="file-input" accept=".kml,.kmz" hidden>
 
-  <!-- کتابخانه‌ها -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://unpkg.com/leaflet-omnivore@0.4.0/leaflet-omnivore.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <!-- کتابخانه‌ها از jsDelivr (سازگار با ایران) -->
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-omnivore@0.4.0/leaflet-omnivore.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  
   <script src="app.js"></script>
 </body>
 </html>
